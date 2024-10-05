@@ -1,12 +1,21 @@
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
+const menu_toggle = document.querySelector('.nav-menu-toggle');
+const menu_icon = document.querySelector('.nav-menu-toggle ion-icon');
+const menu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
+menu_toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if(menu.dataset.open == '1') {
+        gsap.to(menu, {height: 0});
+        menu_icon.setAttribute("name", "menu");
+        menu.dataset.open = 0;
+    } else {
+        menu_icon.setAttribute("name", "close");
+        gsap.to(menu, {height: 'auto'});
+        menu.dataset.open = 1;
+    }
+
 });
-
-
 $(document).ready(function(){
     $('.galleryslider').slick({
         slidesToShow: 3, // Number of slides to show at once

@@ -47,9 +47,8 @@ img{
     overflow: hidden;
     width: 100%;
     position: absolute;
-    top: calc(100% + 1rem);
+    top: calc(100%);
     left: 0;
-    padding: 0 1rem;
     text-align: center; 
 }
 
@@ -291,8 +290,8 @@ img{
         font-weight:500;
     }
     .galleryslider img {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         display: block;
         object-fit: cover;
         padding: 5px
@@ -343,7 +342,16 @@ img{
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
-
+    .galleryitem img{
+        margin: 0 auto;
+    }
+    .galleryslider img {
+        width: 400px;
+        height: 400px;
+        display: block;
+        object-fit: cover;
+        padding: 5px
+    }
 
 }
 
