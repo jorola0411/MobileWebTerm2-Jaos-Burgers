@@ -18,7 +18,7 @@ menu_toggle.addEventListener('click', (e) => {
 });
 $(document).ready(function(){
     $('.galleryslider').slick({
-        slidesToShow: 3, // Number of slides to show at once
+        slidesToShow: 1, // Number of slides to show at once
         slidesToScroll: 1, // Number of slides to scroll at once
         autoplay: true, // Enable automatic sliding
         autoplaySpeed: 2000, // Speed of the autoplay in milliseconds
