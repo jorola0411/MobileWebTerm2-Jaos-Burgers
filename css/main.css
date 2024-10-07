@@ -300,7 +300,7 @@ img{
         margin: 0 auto;
     }
     .contactlocation {
-        grid-template-columns: 1fr; 
+        grid-template-columns: repeat(6, 1fr); 
     }
     .contactlocation p {
         font-size: 16px;
@@ -315,11 +315,7 @@ img{
         text-align: center;
     }
 
-    .contact-location .contact,
-    .contact-location .location {
-        grid-column: span 12; 
-    }
-
+ 
     .footer-content {
         grid-template-columns: repeat(1, 1fr);
     }

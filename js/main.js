@@ -16,6 +16,21 @@ menu_toggle.addEventListener('click', (e) => {
     }
 
 });
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        // If screen is larger than mobile/tablet size, close the menu
+        gsap.to(menu, { height: 'auto' });
+        menu_icon.setAttribute("name", "menu");
+        menu.dataset.open = 0;
+    } else {
+        // If screen is mobile/tablet size, keep menu closed initially
+        gsap.to(menu, { height: 0 });
+        menu_icon.setAttribute("name", "menu");
+        menu.dataset.open = 0;
+    }
+});
+
 $(document).ready(function(){
     $('.galleryslider').slick({
         slidesToShow: 1, // Number of slides to show at once
